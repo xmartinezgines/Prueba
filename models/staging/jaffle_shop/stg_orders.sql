@@ -1,4 +1,4 @@
-with orders_table as(
+with orders as(
     select
     id as order_id,
     user_id as customer_id,
@@ -8,4 +8,4 @@ with orders_table as(
     from raw.jaffle_shop.orders
 ),
 
-select * from orders_table
+select * from orders
