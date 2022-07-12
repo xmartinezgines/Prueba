@@ -1,5 +1,4 @@
-with payments as(
-    select
+select
     id as payment_id,
     orderid	as order_id,
     paymentmethod,
@@ -7,7 +6,4 @@ with payments as(
     amount,
     created
 
-    from raw.stripe.payments
-),
-
-select * from payments
+from raw.stripe.payment
