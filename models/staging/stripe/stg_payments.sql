@@ -4,6 +4,7 @@ select
     paymentmethod as payment_method,
     status,	
     amount/100 as amount, -- amount is stored in cents, convert it to dollars
-    created as created_at
+    created as created_at,
+    _batched_at as batched_at
 
 from {{ source('stripe', 'payment') }}
